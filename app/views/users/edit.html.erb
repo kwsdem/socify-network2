@@ -1,0 +1,65 @@
+<div class="row">
+  <div class="col-lg-6 col-lg-offset-3">
+    <div class="well">
+      <h3>Edit Profile</h3>
+      <%= form_for @user do |f| %>
+        <div class="form-group">
+          <%= f.label :avatar %>
+          <br>
+          <%= render 'shared/avatar', user: @user %>
+          <br>
+          <br>
+          <%= f.file_field :avatar %>
+        </div>
+        <div class="form-group">
+          <%= f.label :cover %>
+          <br>
+          <%= render 'shared/cover', user: @user %>
+          <br>
+          <%= f.file_field :cover %>
+        </div>
+        <div class="form-group">
+          <%= f.label :name %>
+          <%= f.text_field :name, placeholder: 'Full Name', class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :about %>
+          <%= f.text_area :about, placeholder: 'About', class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :location %>
+          <%= f.text_field :location, placeholder: 'Location', class: 'form-control' %>
+        </div>
+
+      <% if @user.sex == "male" %>
+        <div class="form-group">
+          <%= f.label :steam_profile %>
+          <%= f.text_field :url, placeholder: 'Steam profile', class: 'form-control' %>
+        </div>
+      <% else %>
+        <div class="form-group">
+          <%= f.label :heartit_profile %>
+          <%= f.text_field :url, placeholder: 'Heartit profile', class: 'form-control' %>
+        </div>
+      <% end %>
+
+        <div class="form-group">
+          <%= f.label :phone_number %>
+          <%= f.text_field :phone_number, placeholder: 'Phone Number', class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :age %>
+          <%= f.date_select :ages, {include_blank: false, order: [:day, :month, :year] ,start_year: Date.today.year - 18, end_year: Date.today.year - 13, default: {day: 31, month: 1, year: 1997}}, placeholder: 'Date of Birth', class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :sex %><br>
+          <%= f.select :sex, options_for_seasons, class: 'form-control', prompt: 'Select One' %>
+        </div>
+        <div class="actions">
+          <%= submit_tag 'Update', class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
