@@ -15,7 +15,11 @@
           <li><%= link_to(current_user.name, user_path(current_user)) %></li>
           
           <li><%= link_to mailbox_inbox_path do  %>
-              <span class="label label-danger pull-right"><%=unread_messages_count%></span>
+            <% if unread_messages_count>0 %>
+              <span class="label label-danger pull-right">
+                <%=unread_messages_count%>
+              </span>
+            <% end %>
               <em class="fa fa-inbox fa-lg"></em>
               <span>Inbox</span>
             <% end %>
