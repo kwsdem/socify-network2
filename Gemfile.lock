@@ -203,6 +203,9 @@ GEM
       sprockets (~> 2.8, < 3.0)
       sprockets-rails (~> 2.0)
     shellany (0.0.1)
+    simple_form (3.2.1)
+      actionpack (> 4, < 5.1)
+      activemodel (> 4, < 5.1)
     slop (3.6.0)
     spring (1.3.6)
     sprockets (2.12.4)
@@ -245,7 +248,7 @@ DEPENDENCIES
   acts_as_votable (~> 0.10.0)
   autoprefixer-rails
   better_errors
-  bootstrap-sass (~> 3.2.0)
+  bootstrap-sass (~> 3.2.0.2)
   carrierwave
   cloudinary
   counter_culture (~> 0.1.33)
@@ -264,6 +267,7 @@ DEPENDENCIES
   rails (= 4.1.6)
   rails_12factor
   sass-rails (~> 4.0.3)
+  simple_form (~> 3.2, >= 3.2.1)
   spring
   sqlite3
   tzinfo-data

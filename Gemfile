@@ -15,10 +15,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 
 # Use twitter bootstrap sass
-gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap-sass', '~> 3.2.0.2'
 gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
-
+gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'mailboxer'
 
 group :development do
