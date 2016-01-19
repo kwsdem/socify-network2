@@ -14,11 +14,12 @@
         <% if user_signed_in? %>
           <li><%= link_to(current_user.name, user_path(current_user)) %></li>
           
-          <%= link_to mailbox_inbox_path do  %>
-            <span class="label label-danger pull-right"><%=unread_messages_count%></span>
-            <em class="fa fa-inbox fa-lg"></em>
-            <span>Inbox</span>
-          <% end %>
+          <li><%= link_to mailbox_inbox_path do  %>
+              <span class="label label-danger pull-right"><%=unread_messages_count%></span>
+              <em class="fa fa-inbox fa-lg"></em>
+              <span>Inbox</span>
+            <% end %>
+          </li>
 
           <li><%= link_to('Sign out', destroy_user_session_path, method: :delete) %></li>
         <% else %>

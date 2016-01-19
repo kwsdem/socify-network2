@@ -15,12 +15,6 @@
       </div>
 
       <div class="form-group">
-        <%= f.label :birthday %>
-        <%= f.date_field :birthday, max: Date.today-4745, min: Date.today-6870, class: 'form-control' %>
-      </div>
-
-
-      <div class="form-group">
         <%= f.label :email %>
         <%= f.email_field :email, class: 'form-control', placeholder: 'email@example.com' %>
       </div>
@@ -37,7 +31,12 @@
       </div>
 
       <div class="form-group">
-        <%= f.label :sex %><br>
+        <%= f.label :birthday %>
+        <%= f.date_field :birthday, max: Date.today-4745, min: Date.today-6870, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :gender %><br>
         <%= f.select :sex, options_for_seasons, class: 'form-control', prompt: 'Select One' %>
       </div>
       <div class="actions">
