@@ -29,7 +29,7 @@ class ApplicationController < ActionController::Base
 
   protected
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) << [:name, :ages, :password_confirmation]
+    devise_parameter_sanitizer.for(:sign_up) << [:name, :sex, :ages, :password_confirmation]
     devise_parameter_sanitizer.for(:sign_in) << [:email, :remember_me]
   end
 

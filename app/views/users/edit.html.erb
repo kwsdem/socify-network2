@@ -22,10 +22,7 @@
           <%= f.label :name %>
           <%= f.text_field :name, placeholder: 'Full Name', class: 'form-control' %>
         </div>
-        <div class="form-group">
-          <%= f.label :about %>
-          <%= f.text_area :about, placeholder: 'About', class: 'form-control' %>
-        </div>
+        
         <div class="form-group">
           <%= f.label :location %>
           <%= f.text_field :location, placeholder: 'Location', class: 'form-control' %>
@@ -35,11 +32,6 @@
         <div class="form-group">
           <%= f.label :steam_profile %>
           <%= f.text_field :url, placeholder: 'Steam profile', class: 'form-control' %>
-        </div>
-      <% else %>
-        <div class="form-group">
-          <%= f.label :heartit_profile %>
-          <%= f.text_field :url, placeholder: 'Heartit profile', class: 'form-control' %>
         </div>
       <% end %>
 

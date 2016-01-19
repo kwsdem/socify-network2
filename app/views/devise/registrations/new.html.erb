@@ -35,6 +35,11 @@
         <%= f.label :password_confirmation %>
         <%= f.password_field :password_confirmation, class: 'form-control', autocomplete: 'off', placeholder: 'password confirmation' %>
       </div>
+
+      <div class="form-group">
+        <%= f.label :sex %><br>
+        <%= f.select :sex, options_for_seasons, class: 'form-control', prompt: 'Select One' %>
+      </div>
       <div class="actions">
         <%= f.submit 'Sign up', class: 'btn btn-success' %>
       </div>
